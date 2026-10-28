@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b25">
+  <meta name="description" content="A little Diwali surprise filled with light, love, and warm wishes.">
+  <title>A Little Diwali Surprise ✨</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow glow-one" aria-hidden="true"></div>
+  <div class="ambient-glow glow-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Diwali surprise home" id="homeLink">
+      <span class="brand-mark" aria-hidden="true">✦</span><span>Diwali Surprise</span>
+    </a>
+    <div class="audio-controls">
+      <span id="audioStatus" class="audio-status" role="status" aria-live="polite">Music starts when you open the surprise</span>
+      <button id="muteButton" class="icon-button" type="button" aria-label="Mute music" aria-pressed="false" title="Mute or unmute music">
+        <span id="speakerIcon" aria-hidden="true">🔊</span><span class="mute-label">Music</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="welcomeScene" class="scene scene-welcome active" aria-labelledby="welcomeTitle">
+      <div class="star-field" aria-hidden="true"></div>
+      <div class="rangoli" aria-hidden="true"><span>✺</span><span>✧</span><span>✦</span><span>✧</span></div>
+      <div class="welcome-content">
+        <p class="eyebrow reveal-delay-1">A little light. A lot of love.</p>
+        <h1 id="welcomeTitle" class="welcome-title reveal-delay-2">A Little Diwali<br><em>Surprise</em> for You...</h1>
+        <p class="welcome-copy reveal-delay-3">Something special is waiting to brighten your day.</p>
+        <button id="openSurpriseButton" class="primary-button floating reveal-delay-4" type="button">
+          <span aria-hidden="true">✨</span> Open Your Diwali Surprise <span aria-hidden="true">✨</span>
+        </button>
+        <div class="welcome-diyas" aria-hidden="true">
+          <span class="diya diya-left"><i></i><b></b></span>
+          <span class="diya diya-center"><i></i><b></b></span>
+          <span class="diya diya-right"><i></i><b></b></span>
+        </div>
+        <p class="tiny-note">Turn up your sound for the full festive feeling ♡</p>
+      </div>
+    </section>
+
+    <section id="fireworksScene" class="scene scene-fireworks" aria-labelledby="fireworksTitle" hidden>
+      <div class="scene-content fireworks-content">
+        <p class="eyebrow">A sky full of wishes</p>
+        <h2 id="fireworksTitle" class="festival-title">✨ Happy Diwali! ✨</h2>
+        <p class="festival-copy">May your life shine with happiness, prosperity, peace, and love.</p>
+        <div class="loading-sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
+        <button id="skipAnimationButton" class="secondary-button" type="button">Skip Animation <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="familyScene" class="scene scene-family" aria-labelledby="familyTitle" hidden>
+      <div class="scene-content family-content">
+        <p class="eyebrow">A little warmth, from our home to yours</p>
+        <h2 id="familyTitle" class="section-title">Warm Diwali Wishes<br><em>From Our Family</em></h2>
+        <figure class="photo-frame">
+          <div class="photo-inner">
+            <img id="familyPhoto" src="assets/family-photo.jpg" alt="Our family sharing warm Diwali wishes" decoding="async">
+            <div id="photoFallback" class="photo-fallback" hidden>
+              <span class="fallback-icon" aria-hidden="true">🪔</span>
+              <strong>Your family photo goes here</strong>
+              <span>Add your photograph as <code>assets/family-photo.jpg</code></span>
+            </div>
+          </div>
+          <figcaption>With love, light, and festive blessings</figcaption>
+        </figure>
+        <p id="familyGreeting" class="greeting-text">May this Diwali fill your home with happiness, your heart with love, and your life with endless success. Wishing you and your family a bright, beautiful, and prosperous Diwali!</p>
+        <p id="familySignature" class="signature">With love, <span id="familyNameText">Your Family</span> Family</p>
+        <button id="continueButton" class="primary-button" type="button">One More Wish <span aria-hidden="true">✦</span></button>
+      </div>
+    </section>
+
+    <section id="finalScene" class="scene scene-final" aria-labelledby="finalTitle" hidden>
+      <div class="scene-content final-content">
+        <div class="final-sparkle" aria-hidden="true">✧</div>
+        <p class="eyebrow">From our family to yours</p>
+        <h2 id="finalTitle" class="section-title">Wishing You a<br><em>Shubh Deepavali</em></h2>
+        <figure class="photo-frame final-photo-frame">
+          <div class="photo-inner">
+            <img id="finalFamilyPhoto" src="assets/family-photo.jpg" alt="Our family sharing warm Diwali wishes" decoding="async">
+            <div class="photo-fallback final-photo-fallback" hidden>
+              <span class="fallback-icon" aria-hidden="true">🪔</span>
+              <strong>Your family photo goes here</strong>
+              <span>Add your photograph as <code>assets/family-photo.jpg</code></span>
+            </div>
+          </div>
+        </figure>
+        <p id="finalGreeting" class="greeting-text">May this Diwali fill your home with happiness, your heart with love, and your life with endless success. Wishing you and your family a bright, beautiful, and prosperous Diwali!</p>
+        <p class="signature">With love, <span id="finalFamilyName">Your Family</span> Family</p>
+        <div class="final-actions">
+          <button id="replayButton" class="primary-button" type="button"><span aria-hidden="true">↻</span> Watch Surprise Again</button>
+          <button id="shareButton" class="secondary-button" type="button"><span aria-hidden="true">↗</span> Share This Greeting</button>
+        </div>
+        <p id="shareStatus" class="share-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Made with</span> <span class="heart" aria-label="love">♥</span> <span>and a little Diwali magic</span></footer>
+
+  <audio id="diwaliAudio" loop preload="metadata">
+    <source src="assets/diwali-music.mp3" type="audio/mpeg">
+  </audio>
+  <noscript><p class="noscript-message">This Diwali surprise needs JavaScript enabled for its animations and scene transitions.</p></noscript>
+</body>
+</html>
