@@ -1,6 +1,6 @@
 # Diwali Surprise Website 🪔✨
 
-A responsive four-scene Diwali greeting made with HTML, CSS, and vanilla JavaScript. It includes canvas fireworks, an optional local looping MP3, a family-photo reveal, replay, and sharing/copy-link fallback. It works as a static site and can be hosted for free with GitHub Pages.
+A responsive Diwali celebration and greeting website made with HTML, CSS, and vanilla JavaScript. It features rich canvas cracker and fireworks animations (Rockets, Golden Willows, Peonies, Anars, Chakris, Sparklers, and Ladi) with synthesized sound effects, an elegant family-photo greeting reveal, click/tap-anywhere interactive cracker bursting, optional background music, replay, and social sharing. It works as a static site and can be hosted for free with GitHub Pages.
 
 ## Project structure
 
@@ -71,12 +71,17 @@ You can also open `index.html` directly for basic checks, but Live Server is rec
 
 ## Testing checklist
 
-- Click **Open Your Diwali Surprise**. The fireworks scene should appear, and audio should attempt to start.
-- Confirm fireworks transition to the family photo scene after several seconds. Use **Skip Animation** to move straight to the reveal.
-- Confirm **One More Wish** opens the final greeting.
+- Click **Open Your Diwali Surprise**. The fireworks scene should appear, and festive audio should attempt to start.
+- Confirm fireworks transition to the celebration greeting page after several seconds, or use **See Your Greeting** to skip straight to the page.
+- On the celebration page, verify the family photo, personal family greeting, and signature.
+- Verify continuous high-quality cracker animations:
+  - Sky Rockets launching and bursting into spherical peonies and golden willow showers.
+  - Golden Anar fountains erupting upward from the lower corners.
+  - Ground Chakris spinning with colorful spiral sparks.
+- Tap or click anywhere on the screen background to burst crackers at your cursor/finger position. Drag with mouse pressed to draw sparkler trails.
 - Confirm **Watch Surprise Again** returns to the welcome scene without restarting the audio.
 - Test the mute/unmute control.
-- Test **Share This Greeting** on a supported mobile browser. On browsers without native sharing, the page tries to copy the URL and displays a confirmation.
+- Test **Share This Greeting** on mobile and desktop.
 - Temporarily remove/rename the photo to verify the photo fallback; restore it afterward.
 - Temporarily remove/rename the MP3 to verify the audio error is handled gracefully; restore it afterward.
 - Open Developer Tools (`F12`) and inspect the **Console** and **Network** tabs for errors or missing files.
